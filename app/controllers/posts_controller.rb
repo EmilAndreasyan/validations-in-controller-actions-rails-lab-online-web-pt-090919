@@ -10,9 +10,9 @@ class PostsController < ApplicationController
 
   def update
     
-    if @article.valid?
-      @article.update(post_params)
-      redirect_to article_path(@article)
+    if @post.valid?
+      @post.update(post_params)
+      redirect_to post_path(@post)
     else
       render :edit
     end
