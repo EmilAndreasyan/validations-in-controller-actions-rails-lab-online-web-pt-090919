@@ -2,7 +2,6 @@ class PostsController < ApplicationController
   before_action :set_post!, only: [:show, :edit, :update]
 
   def show
-    render :show
   end
 
   def edit
@@ -11,9 +10,9 @@ class PostsController < ApplicationController
 
   def update
     
-    if @post.valid?
-      @post.update(post_params)
-      redirect_to post_path(@post)
+    if @article.valid?
+      @article.update(post_params)
+      redirect_to article_path(@article)
     else
       render :edit
     end
